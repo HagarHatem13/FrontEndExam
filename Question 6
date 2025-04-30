@@ -1,0 +1,87 @@
+/**
+ * Question 6:
+ * 
+ * 1- Issue:
+ * The dependency array [] means the memoized value won’t update if numbers ever changes. 
+ * However, since numbers is declared inside the component, a new array will be created on every render. 
+ * To fix this:
+ * const numbers = useMemo(() => [1, 2, 3, 4, 5], []);
+ * const doubledNumbers = useMemo(() => numbers.map(n => n * 2), [numbers]);
+ * 
+ * 2- Pure Function:
+ * function add(a, b) {
+ * return a + b;
+ * }
+ *  Impure Function :
+ * let total = 0;
+ * function addToTotal(a) {
+ * total += a;
+ * return total;
+ * }
+ * Why It Matters in React:
+ * React relies on predictability. Pure functions always return the same result given the same inputs, making them safe for rendering components and memoization.
+ * Impure functions can cause unexpected bugs due to side effects.
+ * 
+ * 3-import React, { useRef } from 'react';
+
+function Dropdown() {
+  const selectRef = useRef();
+
+  const handleClick = () => {
+    alert(Selected: ${selectRef.current.value});
+  };
+
+  return (
+    <>
+      <select ref={selectRef}>
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+      </select>
+      <button onClick={handleClick}>Show Selected</button>
+    </>
+  );
+}
+
+4-class MyComponent extends React.Component {
+  componentDidMount() {
+    console.log('Component mounted');
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('Component updated');
+  }
+
+  componentWillUnmount() {
+    console.log('Component will unmount');
+  }
+
+  render() {
+    return <div>Hello World</div>;
+  }
+}
+
+5-What is a Closure?
+
+A closure is a function that “remembers” variables from the outer scope even after the outer function has finished executing.
+In simpler terms:A closure allows a function to access variables from its parent scope even after the parent function has closed.
+
+var a = 1;
+function someFunction(number) {
+  function otherFunction(input) {
+    return a;
+  }
+  a = 5;
+  return otherFunction;
+}
+
+var firstResult = someFunction(19);
+var result = firstResult(12);
+
+Explanation:
+	•	someFunction returns otherFunction.
+	•	otherFunction accesses a from the outer scope.
+	•	Even though a = 1 initially, it is set to 5 before otherFunction is returned.
+	•	Closures capture references, not values.
+
+  Output: result = 5
+ */
