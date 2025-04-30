@@ -1,0 +1,22 @@
+/**
+ * Question 2:
+	1.	Reconciliation in React: The process React uses to update the DOM by comparing new and old virtual DOMs.
+	2.	Prop Drilling: Passing props through components; avoided using Context API or state management tools.
+	3.	Stateful vs Stateless: Stateful components manage their own state; stateless rely on props.
+	4.	Arrow Functions & this: No, arrow functions do not have their own this.
+	5.	map() and Mutation: No, map() returns a new array.
+	6.	map() vs forEach(): map() returns a new array; forEach() does not.
+	7.	JavaScript Promise: An object representing async completion or failure.
+	8.	Make Object Immutable: Use Object.freeze(obj).
+	9.	Parse JSON: Use JSON.parse(string).
+	10.	Error Handling in async/await: Use try...catch.
+	11.	Environment Variables: Store secrets or config using .env; used via process.env.
+	12.	Responsive Design:is the practice of creating websites that look and function well on all screen sizes—from large desktop monitors to small mobile phones. Use media queries, relative units, and flexible layouts.
+	13.	Check if key exists:
+	•	key in obj
+	•	obj.hasOwnProperty(key)
+	•	obj[key] !== undefined
+	14.	Memoization: Caching function results; in React use useMemo() or React.memo.
+
+ * 
+ */
