@@ -1,0 +1,19 @@
+/**
+ * Question 4: OOP Questions
+	1.	Public vs Private Constructor:
+	•	Public: allows creating instances externally.
+	•	Private: restricts instance creation; used in Singleton pattern.
+	2.	Encapsulation vs Abstraction:
+	•	Encapsulation: data hiding via access modifiers.
+	•	Abstraction: showing only essential features.
+	3.	final keyword:
+	•	Variable: can’t be reassigned.
+	•	Method: can’t be overridden.
+	•	Class: can’t be extended.
+	4.	Singleton Pattern: One instance only; used in config managers, DB connections.
+	5.	Static Type Polymorphism: Method overloading at compile-time.
+	6.	True or False:
+	•	a: False. Static methods cannot be overridden.
+	•	b: True (definition of abstraction).
+	•	c: False
+ */
