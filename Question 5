@@ -1,0 +1,85 @@
+/** Question 5:
+ * 
+ *  1- HTTP GET Request(Promise based):
+ * function fetchData(url) {
+  return fetch(url)
+    .then(response => response.json())
+    .catch(error => console.error('Error:', error));
+}
+
+ * 2-Recursion :
+ * function power(base, exponent) {
+  if (exponent === 0) return 1;
+  return base * power(base, exponent - 1);
+}
+ * 3- Second Lowest & Second Greatest:
+function secondLowHigh(arr) {
+  let sorted = [...new Set(arr)].sort((a, b) => a - b);
+  return [sorted[1], sorted[sorted.length - 2]];
+}
+  4-Leap Year Check:
+  function isLeapYear(year) {
+  return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+}
+  5- BankAccount Class:
+  class BankAccount {
+  constructor(accountNumber, balance) {
+    this.accountNumber = accountNumber;
+    this.balance = balance;
+  }
+
+  deposit(amount) {
+    this.balance += amount;
+  }
+
+  withdraw(amount) {
+    if (amount <= this.balance) this.balance -= amount;
+    else console.log("Insufficient balance");
+  }
+}
+
+
+let account = new BankAccount(123456, 1000);
+account.deposit(500);
+account.withdraw(300);
+console.log(account.balance); // 1200
+
+6-Map/Filter/Reduce for Student Marks:
+let students = [
+  { name: "Smith", rollNumber: 31, marks: 80 },
+  { name: "Jenny", rollNumber: 15, marks: 69 },
+  { name: "John", rollNumber: 16, marks: 35 },
+  { name: "Tiger", rollNumber: 7, marks: 55 }
+];
+
+let highScorers = students.filter(s => s.marks > 60).map(s => s.name);
+console.log("High scorers:", highScorers);
+
+let adjustedTotal = students
+  .map(s => ({ ...s, marks: s.marks < 60 ? s.marks + 20 : s.marks }))
+  .filter(s => s.marks > 60)
+  .reduce((sum, s) => sum + s.marks, 0);
+console.log("Total after adjustment:", adjustedTotal);
+
+7-Binary Search:
+function binarySearch(arr, target) {
+  let left = 0, right = arr.length - 1;
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+    if (arr[mid] === target) return mid;
+    else if (arr[mid] < target) left = mid + 1;
+    else right = mid - 1;
+  }
+  return -1;
+}
+  8- Linked List to Array:
+  function linkedListToArray(head) {
+  const result = [];
+  while (head) {
+    result.push(head.value);
+    head = head.next;
+  }
+  return result;
+}
+
+ */
