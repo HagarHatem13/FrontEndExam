@@ -1,0 +1,34 @@
+/** Question 3 :What is the Output?
+ * 1-Output:
+ * 0
+ * 1
+ * 2
+ * 3
+ * 
+ * 2- Output:
+ * After displayData call 
+ * Data fetched!
+ * 
+ * 3-Output:
+ * Hello , Guest!
+ *  Hello , Guest!
+ * 
+ * 4-Output:
+ * Window {...}
+ * 
+ * 5-Output: 
+ * undefined
+ * 
+ * 
+ * 6-Output:
+ * bear bear
+ * triger sheep
+ * 
+ * 
+ * 7-Output:
+ * undefined
+ * 
+ * 8- Output:
+ * swim
+ * 
+ */
